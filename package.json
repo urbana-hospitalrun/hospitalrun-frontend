@@ -24,7 +24,7 @@
     "broccoli-export-text": "0.0.2",
     "broccoli-funnel": "^1.0.1",
     "broccoli-manifest": "0.0.7",
-    "broccoli-merge-trees": "^1.0.0",
+    "broccoli-merge-trees": "^1.1.1",
     "ember-cli": "1.13.13",
     "ember-cli-active-link-wrapper": "0.0.4",
     "ember-cli-app-version": "^1.0.0",
