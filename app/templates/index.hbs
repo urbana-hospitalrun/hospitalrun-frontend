@@ -2,27 +2,17 @@
 
   <div class="view-top-bar">
     <h1 class="view-current-title">What would you like to do?</h1>
+
+    <h2> Low Quantity </h2>
     <table class="table">
        <tr class="table-header">
          <th>Name</th>
          <th>Quantity</th>
-         <th>Requested On</th>
-         <th>Requested By</th>
-         {{#if canFulfill}}
-           <th>Actions</th>
-         {{/if}}
        </tr>
-       {{#each model as |request|}}
+       {{#each mockInventory as |inventory|}}
          <tr>
-           <td>{{request.inventoryItem.name}}</td>
-           <td>{{request.quantity}}</td>
-           <td>{{date-format request.dateRequested}}</td>
-           <td>{{request.requestedBy}}</td>
-           {{#if canFulfill}}
-             <td>
-               <button class="btn btn-primary" {{action 'fulfill' request}}>Fulfill</button>
-             </td>
-           {{/if}}
+           <td>{{inventory.inventoryItem.name}}</td>
+           <td>{{inventory.quantity}}</td>
          </tr>
        {{/each}}
     </table>

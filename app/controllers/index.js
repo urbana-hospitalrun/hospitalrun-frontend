@@ -13,31 +13,31 @@ export default Ember.Controller.extend(UserSession, {
 
   mockInventory: [
     {
-      name: "Advil",
+      inventoryItem: {name: "Advil"},
       quantity: 10,
       inventoryType: "medication",
       distributionUnit: "pcs",
     },
     {
-      name: "Tylenol",
+      inventoryItem: {name: "Tylenol"},
       quantity: 0,
       inventoryType: "medication",
       distributionUnit: "pcs",
     },
     {
-      name: "face masks",
+      inventoryItem: {name: "Facemasks"},
       quantity: 100,
       inventoryType: "supply",
       distributionUnit: "pcs",
     },
     {
-      name: "syringes",
+      inventoryItem: {name: "Syringes"},
       quantity: 20,
       inventoryType: "supply",
       distributionUnit: "pcs",
     },
     {
-      name: "pikachu",
+      inventoryItem: {name: "Pikachu"},
       quantity: 1,
       inventoryType: "pokemon",
       distributionUnit: "pkmn",
