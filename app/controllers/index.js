@@ -1,6 +1,49 @@
 import Ember from 'ember';
 import UserSession from 'hospitalrun/mixins/user-session';
 export default Ember.Controller.extend(UserSession, {
+
+  mockRequests: [
+  	{
+  		"name": 'request2'
+  	},
+  	{
+  		"name": 'request1'
+  	}
+  ],
+
+  mockInventory: [
+    {
+      name: "Advil",
+      quantity: 10,
+      inventoryType: "medication",
+      distributionUnit: "pcs",
+    },
+    {
+      name: "Tylenol",
+      quantity: 0,
+      inventoryType: "medication",
+      distributionUnit: "pcs",
+    },
+    {
+      name: "face masks",
+      quantity: 100,
+      inventoryType: "supply",
+      distributionUnit: "pcs",
+    },
+    {
+      name: "syringes",
+      quantity: 20,
+      inventoryType: "supply",
+      distributionUnit: "pcs",
+    },
+    {
+      name: "pikachu",
+      quantity: 1,
+      inventoryType: "pokemon",
+      distributionUnit: "pkmn",
+    },
+  ],
+
   indexLinks: [
     'Appointments',
     'Labs',

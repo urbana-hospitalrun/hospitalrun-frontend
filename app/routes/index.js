@@ -16,7 +16,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
         },
         {
           name: "Tylenol",
-          quantity: 0,m
+          quantity: 0,
           inventoryType: "medication",
           distributionUnit: "pcs",
         },
