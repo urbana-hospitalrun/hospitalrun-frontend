@@ -1,71 +1,104 @@
 <section class="view index">
 
   <div class="view-top-bar">
-    <h1 class="view-current-title">What would you like to do?</h1>
 
-    <h3> Current Requests: {{model.length}} </h3>
+      	<p style= "text-align: left; padding-top: 15px">
+   			<span class="glyphicon glyphicon-heart-empty"></span>
+      		&nbsp;
+   			Imaging Requests: <strong>3</strong> 
+   			&nbsp; &nbsp; &nbsp;
+   			<span class="glyphicon glyphicon-heart"></span>
+   			&nbsp;
+   			Completed Requests: <strong>2</strong>
+   		</p>
 
-    <table class="table">
+  </div>	
 
-    	<tr class="table-header">
-		    <th>Current Requests</th>
-		    <th>Completed Requests</th>
-		</tr>
+  <div class="container">
 
-		<tr>
-			<td>
-			{{#item-listing paginationProps=paginationProps }}
-			  {{#if hasRecords}}
-			    <table class="table">
-			      <tr class="table-header">
-			        <th>Date Requested</th>
-			        <th>Patient</th>
-			        <th>Imaging Type</th>
-			      </tr>
-			      {{#each model as |imaging|}}
-			        <tr {{action 'editItem' imaging }}>
-			          <td>{{date-format imaging.requestedDate}}</td>
-			          <td>{{imaging.patient.displayName}}</td>
-			          <td>{{imaging.imagingType.name}}</td>
-			        </tr>
-			      {{/each}}
-			    </table>
-			  {{else}}
-			    <div class="alert alert-info">
-			      <p>No items found. {{#if canAdd}} <a href="#" {{action 'newItem'}}>Create a new record?</a>{{/if}}</p>
-			    </div>
-			  {{/if}}
-			{{/item-listing}} 
-			</td>
+   	    
+   	    <table class="table">
 
-			<td>
-				{{#item-listing paginationProps=paginationProps }}
-				  {{#if model}}
-				    <table class="table">
-				      <tr class="table-header">
-				          <th>Date Requested</th>
-				          <th>Date Completed</th>
-				          <th>Patient</th>
-				          <th>Results</th>
-				      </tr>
-				      {{#each model as |imaging|}}
-				        <tr>
-				          <td>{{date-format imaging.requestedDate}}</td>
-				          <td>{{date-format imaging.imagingDate}}</td>
-				          <td>{{imaging.patient.displayName}}</td>
-				          <td>{{imaging.result}}</td>
-				        </tr>
-				      {{/each}}
-				    </table>
-				  {{else}}
-				      <div class="alert alert-info">
-				          <p>No completed items found.</p>
-				      </div>
-				  {{/if}}
-				{{/item-listing}}
-			</td>
-		</tr>
-    </table>
-  </div>
+	      <tr style="background-color:#253649">
+	        <th><h4 style="color:white">Imaging Requests</h4></th>
+	        <th> </th>
+	        <th> </th>
+	        <th> 
+				<div class="dropdown">
+				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color:white">
+				    Sort by
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				    <li><a href="#">Date Requested</a></li>
+				    <li><a href="#">Patient Name</a></li>
+				    <li><a href="#">Type</a></li>
+				    <li><a href="#">Notes</a></li>
+				  </ul>
+				</div>
+
+	        	
+	        </th>
+	        <th>
+	        	<button type="button" class="btn btn-default" style="color:white">
+	      			<strong> view all </strong>
+	      		</button>
+	        </th>
+	      </tr>
+
+
+	      <tr class="table-header">
+	        <th>Date Requested</th>
+	        <th>Patient Name</th>
+	        <th>Type</th>
+	        <th>Notes</th>
+	      	<th> </th>
+	      </tr>
+
+	      <tr>
+	      	<td>12/28/2015</td>
+	      	<td>Joe Bagadonuts</td>
+	      	<td>Ankle (Any Single View)</td>
+	      	<td> 
+	      	</td>
+	      	<td>
+	      		<button type="button" class="btn btn-default" style="color:white">
+	      			<strong> complete </strong>
+	      		</button>
+	      	</td>
+	      </tr>
+	  		
+	  	  <tr>	
+	  		<td>12/25/2015</td>
+	      	<td>Kevin Chow</td>
+	      	<td>Head</td>	
+	      	<td> 
+	      	</td>
+	      	<td>
+	      		<button type="button" class="btn btn-default" style="color:white">
+	      			<strong> complete </strong>
+	      		</button>
+	      	</td>
+	      </tr>
+
+	      <tr>
+	      	<td>01/01/2016</td>
+	      	<td>Amelia Yap</td>
+	      	<td>Toe</td>
+	      	<td> 
+	      	</td>
+	      	<td>
+	      		<button type="button" class="btn btn-default" style="color:white">
+	      			<strong> complete </strong>
+	      		</button>
+	      	</td>
+	      </tr>
+	    </table>	
+
+  		<button type="button" class="btn btn-default" style="color:white">
+  			<strong>+new request</strong>
+  		</button>
+
+	</div>	  
 
 </section>
