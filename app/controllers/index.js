@@ -76,6 +76,5 @@ export default Ember.Controller.extend(UserSession, {
       }
     }.bind(this));
     return activeLinks;
-  }.property('indexLinks')
-
+  }.property('indexLinks'),
 });

@@ -2,22 +2,55 @@
 
   <div class="view-top-bar">
     <h1 class="view-current-title">What would you like to do?</h1>
-    <h2> Low Quantity </h2>
+
+    <h2>Low Quantity
+    <div class="view-sub-bar-right">
+        <div class="view-action-buttons" style="float: right;">
+            <div class ="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort By
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Name</a></li>
+                    <li><a href="#">Date of Request</a></li>
+                    <li><a href="#">Type of Medication</a></li>
+                </ul>
+            <button class="btn btn-primary" data-ember-action="1473">+ new request</button>
+                </div>
+        </div>
+    </div>
+      </h2>
+
     <table class="table">
        <tr class="table-header">
          <th>Name</th>
          <th>Quantity</th>
+           <th>Type</th>
        </tr>
        {{#each mockInventory as |inventory|}}
         {{#if (gt 10 inventory.quantity) }}
          <tr>
            <td>{{inventory.inventoryItem.name}}</td>
            <td>{{inventory.quantity}}</td>
+             <td>{{inventory.inventoryType}}</td>
          </tr>
         {{/if}}
        {{/each}}
     </table>
-	
+      <h2>Today's Request</h2>
+      <table class="table">
+          <tr class="table-header">
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Type</th>
+              </tr>
+        {{#each mockInventory as |inventory|}}
+        <tr>
+          <td>{{inventory.inventoryItem.name}}</td>
+          <td>{{inventory.quantity}}</td>
+          <td>{{inventory.inventoryType}}</td>
+          </tr>
+        {{/each}}
+      </table>
   </div>
 
 </section>
