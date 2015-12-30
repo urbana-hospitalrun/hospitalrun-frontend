@@ -3,7 +3,7 @@
 <div class="container" style="margin-top: 30px">
   <div class="header" style="font-size: 20px">
     <div class="col-md-3 no-padding">
-      Admitted Patients: <b> 20</b>
+      Admitted Patients: <b> {{model.length}}</b>
     </div>
     <div class="col-md-3 no-padding">
       Incoming Surgeries: <b> 25</b>
@@ -15,11 +15,6 @@
       <span class="text-primary"><i class="glyphicon glyphicon-user"></i> Welcome, John</span>
     </div>
   </div>
-{{#each model as |user|}}
-  <p>{{user.user}} {{user.disease}}</p>
-  <button {{action 'showPatientInfo'></button>
-{{/each}}
-<p>number of patients: {{model.length}}</p>
 
   <div class="col-md-6" style="padding-left: 0px">
     <table class="table table-hover dashboard-table">
@@ -57,8 +52,8 @@
       <thead class="bg-navy">
         <td></td>
         <td class="text-white">Patient List</td>
-        <td colspan="4">
-         <input type="text" class="form-control pull-right" placeholder="Search for a patient..." style="margin-right: 8px; margin-top: 8px">
+        <td class="no-padding-top-bottom" colspan="4">
+         <input type="text" class="form-control search-box" placeholder="Search for a patient...">
         </td>
       </thead>
       <tbody>
