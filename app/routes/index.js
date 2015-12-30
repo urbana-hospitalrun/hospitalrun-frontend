@@ -2,6 +2,19 @@ import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-rout
 import Ember from 'ember';
 import UserSession from 'hospitalrun/mixins/user-session'
 
+var today = new Date()
+
+var taskData =
+[
+    {'fulfilled': false, 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 1)},
+    {'fulfilled': false, 'type': 'report', 'taskname': 'report heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
+    {'fulfilled': false, 'type': 'report', 'taskname': 'report heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
+    {'fulfilled': false, 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
+    {'fulfilled': false, 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 1)}
+]
+
+
+
 export default Ember.Route.extend(AuthenticatedRouteMixin, UserSession, {
   afterModel: function() {
     this.controllerFor('navigation').set('allowSearch', false);
@@ -13,19 +26,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, UserSession, {
 
     switch (userRole) {
       case 'System Administrator': // aka doctor
-        return [
-          { 'user': 'John Doe', 'disease': 'cancer' },
-          { 'user': 'John Doe', 'disease': 'cancer' },
-          { 'user': 'John Doe', 'disease': 'cancer' },
-          { 'user': 'John Doe', 'disease': 'cancer' },
-          { 'user': 'John Doe', 'disease': 'cancer' },
-          { 'user': 'John Doe', 'disease': 'cancer' },
-          { 'user': 'John Doe', 'disease': 'cancer' },
-          { 'user': 'John Doe', 'disease': 'cancer' },
-          { 'user': 'John Doe', 'disease': 'cancer' },
-          { 'user': 'John Doe', 'disease': 'cancer' },
-          { 'user': 'John Doe', 'disease': 'cancer' }
-        ];
+        return taskData;
       default:
         return null;
     }
