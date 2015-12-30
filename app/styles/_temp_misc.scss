@@ -1,13 +1,13 @@
 .panel-heading {
 
-    .view-sub-bar { padding: 0 15px; }
-
+    .view-sub-bar { padding: 0 15px;
+    }
     .view-sub-nav { margin: 0; }
 
     .view-action-buttons { float: right;
 
         .btn {
-            margin: 12px 0 10px 15px;
+            margin: 12px 9px 10px 15px;
             font-size: 16px;
         }
 
@@ -51,11 +51,23 @@ h3.panel-title {
     color: rgba($navy_drk2, .7);
 }
 
+.red-bar-header {
+    background-color: #ec1c24;
+}
+
+.dash-header {
+    margin-top: 50px;
+}
+
 .twitter-typeahead {
     width: 100%;
     .tt-query, .tt-hint {
         margin-bottom: 0;
     }
+}
+.space-buttons{
+  margin-top: 9px;
+  margin-left: 20px;
 }
 
 .tt-menu {
@@ -178,9 +190,9 @@ h3.panel-title {
 
 @media print {
     body { font-size: 10px; }
-    
+
     body.ember-application { padding-left: 0; }
-    
+
     .panel-footer { display: none; }
-    
+
 }
