@@ -22,7 +22,7 @@
         <td></td>
       </thead>
       <tbody>
-        <tr class="bg-grey-navy">
+        <tr id="header-row">
           <td></td><td>Task</td><td>Location</td><td></td>
         </tr>
         {{#each model.taskData as |task|}}
@@ -50,7 +50,7 @@
         </td>
       </thead>
       <tbody>
-        <tr class="bg-grey-navy">
+        <tr id="header-row">
             <td></td>
             <td>Name</td>
             <td>Sex (Age)</td>
@@ -62,11 +62,9 @@
             <td><i class="glyphicon glyphicon-user"></i></td>
             <td> {{patient.name}}</td>
             <td> {{patient.gender}} ({{patient.age}})</td>
-            <td> {{patient.location}} </td>
+            <td> {{patient.id}} </td>
             <td>
-              <div class="btn btn-primary">
-                Fulfill
-              </div>
+              {{patient.location}}
             </td>
           </tr>
           <tr id="accordion" class="collapse" style="border: 0px">
@@ -74,7 +72,7 @@
               <div class="col-md-9">
                 <table class="patient-info">
                   <tr>
-                    <th>Primary Diagnosis</th>
+                    <td>Primary Diagnosis</td>
                     <td>
                       {{#each patient.pdiag as |p|}}
                         {{p}}<br>
@@ -82,7 +80,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th>Procedures</th>
+                    <td>Procedures</td>
                     <td>
                       {{#each patient.procedures as |p|}}
                         {{p}}<br>
@@ -90,7 +88,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th>Status</th>
+                    <td>Status</td>
                     <td>{{patient.status}}</td>
                   </tr>
                 </table>
