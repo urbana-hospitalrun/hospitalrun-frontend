@@ -3,6 +3,7 @@
   <div class="view-top-bar">
     <h1 class="view-current-title">What would you like to do?</h1>
 
+
 <!-- CSS styles for standard search box with placeholder text-->
 <style type="text/css">	
 	.smallsearch{
@@ -21,16 +22,77 @@
    	{{/link-to}}
 </form>
 	
-    <h2> Low Quantity </h2>	
+    <nav class="navbar navbar-default red-bar-header dash-header">
+      <div class="navbar-header">
+        <div class="navbar-brand">Urgent Items</div>
+      </div>
+    </nav>
+    <table class="table">
+       <tr class="table-header">
+         <th>Name</th>
+         <th>Quantity Needed</th>
+         <th>Consumption Rate</th>
+         <th>Delivery Location</th>
+         <th>Date Requested</th>
+       </tr>
+       {{#each mockRequests as |request|}}
+        {{#if request.isUrgent }}
+         <tr>
+           <td>{{request.name}}</td>
+           <td>{{request.quantity}}</td>
+           <td>{{request.consumption_rate}}</td>
+           <td>{{request.location}}</td>
+           <td>{{request.date}}</td>
+         </tr>
+        {{/if}}
+       {{/each}}
+    </table>
+
+
+    <nav class="navbar navbar-default dash-header">
+      <div class="navbar-header danger">
+        <div class="navbar-brand">Low Quantity</div>
+      </div>
+    </nav>
+
     <table class="table">
        <tr class="table-header">
          <th>Name</th>
          <th>Quantity</th>
+         <th>Expiry Date</th>
        </tr>
        {{#each mockInventory as |inventory|}}
+        {{#if (gt 10 inventory.quantity) }}
          <tr>
            <td>{{inventory.inventoryItem.name}}</td>
            <td>{{inventory.quantity}}</td>
+           <td>{{inventory.expiry_date}}</td>
+         </tr>
+        {{/if}}
+       {{/each}}
+    </table>
+
+
+    <nav class="navbar navbar-default dash-header">
+      <div class="navbar-header danger">
+        <div class="navbar-brand">All Requests</div>
+      </div>
+    </nav>
+    <table class="table">
+       <tr class="table-header">
+         <th>Name</th>
+         <th>Quantity Needed</th>
+         <th>Consumption Rate</th>
+         <th>Delivery Location</th>
+         <th>Date Requested</th>
+       </tr>
+       {{#each mockRequests as |request|}}
+         <tr>
+           <td>{{request.name}}</td>
+           <td>{{request.quantity}}</td>
+           <td>{{request.consumption_rate}}</td>
+           <td>{{request.location}}</td>
+           <td>{{request.date}}</td>
          </tr>
        {{/each}}
     </table>
