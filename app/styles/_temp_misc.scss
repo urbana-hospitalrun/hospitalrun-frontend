@@ -51,6 +51,14 @@ h3.panel-title {
     color: rgba($navy_drk2, .7);
 }
 
+.red-bar-header {
+    background-color: #ec1c24;
+}
+
+.dash-header {
+    margin-top: 50px;   
+}
+
 .twitter-typeahead {
     width: 100%;
     .tt-query, .tt-hint {
