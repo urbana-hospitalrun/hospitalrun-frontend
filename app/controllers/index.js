@@ -11,6 +11,12 @@ export default Ember.Controller.extend(UserSession, {
     'Users'
   ],
 
+  actions: [
+    'showPatientInfo': function(patient) {
+
+    }
+  ]
+
   setupPermissions: function() {
     var permissions = this.get('defaultCapabilities');
     for (var capability in permissions) {

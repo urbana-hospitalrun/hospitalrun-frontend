@@ -5,6 +5,7 @@
   </div>
 {{#each model as |user|}}
   <p>{{user.user}} {{user.disease}}</p>
+  <button {{action 'showPatientInfo'></button>
 {{/each}}
 <p>number of patients: {{model.length}}</p>
 
