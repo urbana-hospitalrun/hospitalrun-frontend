@@ -4,14 +4,29 @@ import UserSession from 'hospitalrun/mixins/user-session'
 
 var today = new Date()
 
-var taskData =
-[
-    {'fulfilled': false, 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 1)},
-    {'fulfilled': false, 'type': 'report', 'taskname': 'report heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
-    {'fulfilled': false, 'type': 'report', 'taskname': 'report heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
-    {'fulfilled': false, 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
-    {'fulfilled': false, 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 1)}
-]
+var modelData = {
+  'taskData': [
+    {'fulfilled': false, 'patientname': 'Test Patient', 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 1)},
+    {'fulfilled': false, 'patientname': 'Test Patient', 'type': 'report', 'taskname': 'report heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
+    {'fulfilled': false, 'patientname': 'Test Patient', 'type': 'report', 'taskname': 'report heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
+    {'fulfilled': false, 'patientname': 'Test Patient', 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
+    {'fulfilled': false, 'patientname': 'Test Patient', 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 1)}
+  ],
+  'patientData': {
+    'Sherman': {
+      'location': 'Room 123',
+    },
+    'Michael': {
+      'location': 'Room 123',
+    },
+    'Josh': {
+      'location': 'Room 123',
+    },
+    'Trevor': {
+      'location': 'Room 123',
+    },
+  }
+}
 
 
 
