@@ -1,8 +1,11 @@
 <section class="view index">
 
   <div class="view-top-bar">
-    <h1 class="view-current-title">What would you like to do?</h1>
-
+    <ul class='yolo'>
+      <li class="hello">Urgent Requests: 1</ul>
+      <li class="hello">Low In Stock: 2</ul>
+      <li class="hello">Requests: 3</ul>
+    </ul>
 
 
 <!-- CSS styles for standard search box with placeholder text-->
@@ -10,12 +13,21 @@
 	.smallsearch{
 	height: 34px;
 	}
+  .hello {
+    display: inline-block;
+    list-style-type: none;
+  }
+  .yolo { 
+    padding-top: 15px;
+    list-style-type: none;
+    display: inline-block;
+  }
 </style>
 
 <form class = "form-inline" style = "margin-top: 15px;">
     <div class="form-group ">
 		<label> search inventory: </label>
-        < input placeholder="Search" class="form-control smallsearch" >
+        <input placeholder="Search" class="form-control smallsearch" >
 	</div>
     <button type="button" class="btn btn-default  "><span class="glyphicon glyphicon-search"></span></button>
    	{{#link-to 'inventory.batch' 'new' class="btn btn-primary "}}
