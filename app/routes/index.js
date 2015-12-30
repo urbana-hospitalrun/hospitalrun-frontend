@@ -30,4 +30,5 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, UserSession, {
         return null;
     }
   }
+
 });
