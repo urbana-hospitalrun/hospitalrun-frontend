@@ -2,6 +2,70 @@
 
   <div class="view-top-bar">
     <h1 class="view-current-title">What would you like to do?</h1>
+
+    <h3> Current Requests: {{model.length}} </h3>
+
+    <table class="table">
+
+    	<tr class="table-header">
+		    <th>Current Requests</th>
+		    <th>Completed Requests</th>
+		</tr>
+
+		<tr>
+			<td>
+			{{#item-listing paginationProps=paginationProps }}
+			  {{#if hasRecords}}
+			    <table class="table">
+			      <tr class="table-header">
+			        <th>Date Requested</th>
+			        <th>Patient</th>
+			        <th>Imaging Type</th>
+			      </tr>
+			      {{#each model as |imaging|}}
+			        <tr {{action 'editItem' imaging }}>
+			          <td>{{date-format imaging.requestedDate}}</td>
+			          <td>{{imaging.patient.displayName}}</td>
+			          <td>{{imaging.imagingType.name}}</td>
+			        </tr>
+			      {{/each}}
+			    </table>
+			  {{else}}
+			    <div class="alert alert-info">
+			      <p>No items found. {{#if canAdd}} <a href="#" {{action 'newItem'}}>Create a new record?</a>{{/if}}</p>
+			    </div>
+			  {{/if}}
+			{{/item-listing}} 
+			</td>
+
+			<td>
+				{{#item-listing paginationProps=paginationProps }}
+				  {{#if model}}
+				    <table class="table">
+				      <tr class="table-header">
+				          <th>Date Requested</th>
+				          <th>Date Completed</th>
+				          <th>Patient</th>
+				          <th>Results</th>
+				      </tr>
+				      {{#each model as |imaging|}}
+				        <tr>
+				          <td>{{date-format imaging.requestedDate}}</td>
+				          <td>{{date-format imaging.imagingDate}}</td>
+				          <td>{{imaging.patient.displayName}}</td>
+				          <td>{{imaging.result}}</td>
+				        </tr>
+				      {{/each}}
+				    </table>
+				  {{else}}
+				      <div class="alert alert-info">
+				          <p>No completed items found.</p>
+				      </div>
+				  {{/if}}
+				{{/item-listing}}
+			</td>
+		</tr>
+    </table>
   </div>
 
 </section>
