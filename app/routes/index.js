@@ -18,14 +18,23 @@ var modelData = {
       'age': '21',
       'gender': 'M',
       'location': 'Room 123',
-      'id': 'P0003'
+      'picture': 'https://image.freepik.com/free-icon/user-male-silhouette_318-55563.png',
+      'id': 'P0003',
+      'pdiag': ['Fall from in-line rollerskates', 'Initial Encounter (12/17/2015)'],
+      'status': 'Scheduled for discharge',
+      'procedures': ['Hip Abductor Release (12/19/2015)', 'Appendix Surgery (12/24/2015)']
+      ]
     },
     {
       'name': 'Rebecca',
       'age': '40',
       'gender': 'F',
       'location': 'Room 123',
-      'id': 'P0003'
+      'picture': 'https://image.freepik.com/free-icon/user-male-silhouette_318-55563.png',
+      'id': 'P0003',
+      'pdiag': ['Fall from in-line rollerskates', 'Initial Encounter (12/17/2015)'],
+      'status': 'Scheduled for discharge',
+      'procedures': ['Hip Abductor Release (12/19/2015)', 'Appendix Surgery (12/24/2015)']
     }
   ]
 }
