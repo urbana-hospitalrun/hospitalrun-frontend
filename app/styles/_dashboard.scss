@@ -6,6 +6,7 @@
   td {
     padding-top: 16px;
     padding-bottom: 16px;
+    background-color: white;
   }
   .no-padding-top-bottom {
     padding-top: 0px;
@@ -17,6 +18,19 @@
   }
   font-size: 18px;
   font-weight: 300;
+  .collapse.in {
+    display: table-row !important;
+  }
+}
+
+.patient-info {
+  background-color: #F2F4F7;
+  color: #243647;
+  padding: 10px;
+  font-size: 12px;
+  td {
+    background-color: #F2F4F7;
+  }
 }
 .bg-navy {
   background-color: #243647;

@@ -8,9 +8,6 @@
     <div class="col-md-3 no-padding">
       Incoming Surgeries: <b> 25</b>
     </div>
-    <div class="col-md-3 no-padding">
-      Requests: <b> 10</b>
-    </div>
     <div class="pull-right">
       <span class="text-primary"><i class="glyphicon glyphicon-user"></i> Welcome, John</span>
     </div>
@@ -54,7 +51,11 @@
       </thead>
       <tbody>
         <tr class="bg-grey-navy">
-            <td></td><td>Name</td><td>Sex (Age)</td><td>ID</td><td>Location</td><td></td>
+            <td></td>
+            <td>Name</td>
+            <td>Sex (Age)</td>
+            <td>ID</td>
+            <td>Location</td>
           </tr>
         {{#each model.patientData as |patient|}}
           <tr data-toggle="collapse" data-target="#accordion" class="clickable">
@@ -68,11 +69,23 @@
               </div>
             </td>
           </tr>
-          <tr>
-            <td></td>
-              <td>
-                  <div id="accordion" class="collapse">Hidden expandable</div>
-              </td>
+          <tr id="accordion" class="collapse" style="border: 0px">
+            <td colspan="42">
+              <table class="patient-info">
+                <tr>
+                  <th>Primary Diagnosis</th>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <th>Procedures</th>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <th>Status</th>
+                  <td>...</td>
+                </tr>
+              </table>
+            </td>
           </tr>
         {{/each}}
       </tbody>
