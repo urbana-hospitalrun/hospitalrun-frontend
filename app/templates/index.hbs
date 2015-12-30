@@ -71,20 +71,33 @@
           </tr>
           <tr id="accordion" class="collapse" style="border: 0px">
             <td colspan="42">
-              <table class="patient-info">
-                <tr>
-                  <th>Primary Diagnosis</th>
-                  <td>...</td>
-                </tr>
-                <tr>
-                  <th>Procedures</th>
-                  <td>...</td>
-                </tr>
-                <tr>
-                  <th>Status</th>
-                  <td>...</td>
-                </tr>
-              </table>
+              <div class="col-md-9">
+                <table class="patient-info">
+                  <tr>
+                    <th>Primary Diagnosis</th>
+                    <td>
+                      {{#each patient.pdiag as |p|}}
+                        {{p}}<br>
+                      {{/each}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Procedures</th>
+                    <td>
+                      {{#each patient.procedures as |p|}}
+                        {{p}}<br>
+                      {{/each}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Status</th>
+                    <td>{{patient.status}}</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-md-3">
+                <img class="img-responsive" src="{{patient.picture}}"/>
+              </div>
             </td>
           </tr>
         {{/each}}

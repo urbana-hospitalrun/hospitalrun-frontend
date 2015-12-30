@@ -23,7 +23,6 @@ var modelData = {
       'pdiag': ['Fall from in-line rollerskates', 'Initial Encounter (12/17/2015)'],
       'status': 'Scheduled for discharge',
       'procedures': ['Hip Abductor Release (12/19/2015)', 'Appendix Surgery (12/24/2015)']
-      ]
     },
     {
       'name': 'Rebecca',
