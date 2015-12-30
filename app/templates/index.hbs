@@ -9,10 +9,12 @@
          <th>Quantity</th>
        </tr>
        {{#each mockInventory as |inventory|}}
+        {{#if (gt 10 inventory.quantity) }}
          <tr>
            <td>{{inventory.inventoryItem.name}}</td>
            <td>{{inventory.quantity}}</td>
          </tr>
+        {{/if}}
        {{/each}}
     </table>
 	
