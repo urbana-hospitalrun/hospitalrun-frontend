@@ -6,26 +6,28 @@ var today = new Date()
 
 var modelData = {
   'taskData': [
-    {'fulfilled': false, 'patientname': 'Sherman', 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 1)},
-    {'fulfilled': false, 'patientname': 'Josh', 'type': 'report', 'taskname': 'report heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
-    {'fulfilled': false, 'patientname': 'Trevor', 'type': 'report', 'taskname': 'report heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
-    {'fulfilled': false, 'patientname': 'Trevor', 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
-    {'fulfilled': false, 'patientname': 'Sherman', 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 1)}
+    {'fulfilled': false, 'patientname': 'Sherman', 'location':'Rm 129', 'type': 'surgery', 'taskname': 'open heart surgery ', 'date': new Date(today.getDate() - 1)},
+    {'fulfilled': false, 'patientname': 'Josh', 'location':'Rm 129', 'type': 'report', 'taskname': 'report heart surgery ', 'date': new Date(today.getDate() - 3)},
+    {'fulfilled': false, 'patientname': 'Trevor', 'location':'Rm 129', 'type': 'report', 'taskname': 'report heart surgery ', 'date': new Date(today.getDate() - 3)},
+    {'fulfilled': false, 'patientname': 'Trevor', 'location':'Rm 129', 'type': 'surgery', 'taskname': 'open heart surgery ', 'date': new Date(today.getDate() - 3)},
+    {'fulfilled': false, 'patientname': 'Sherman', 'location':'Rm 129', 'type': 'surgery', 'taskname': 'open heart surgery ', 'date': new Date(today.getDate() - 1)}
   ],
-  'patientData': {
-    'Sherman': {
+  'patientData': [
+    {
+      'name': 'Sherman',
+      'age': '21',
+      'gender': 'M',
       'location': 'Room 123',
+      'id': 'P0003'
     },
-    'Michael': {
+    {
+      'name': 'Rebecca',
+      'age': '40',
+      'gender': 'F',
       'location': 'Room 123',
-    },
-    'Josh': {
-      'location': 'Room 123',
-    },
-    'Trevor': {
-      'location': 'Room 123',
-    },
-  }
+      'id': 'P0003'
+    }
+  ]
 }
 
 
@@ -41,7 +43,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, UserSession, {
 
     switch (userRole) {
       case 'System Administrator': // aka doctor
-        return taskData;
+        return modelData;
       default:
         return null;
     }
