@@ -2,7 +2,26 @@
 
   <div class="view-top-bar">
     <h1 class="view-current-title">What would you like to do?</h1>
-    <h2> Low Quantity </h2>
+
+<!-- CSS styles for standard search box with placeholder text-->
+<style type="text/css">	
+	.smallsearch{
+	height: 34px; 
+	}
+</style>	
+ 
+<form class = "form-inline" style = "margin-top: 15px;"> 
+    <div class="form-group ">
+		<label> search inventory: </label>
+        < input placeholder="Search" class="form-control smallsearch" >
+	</div>   
+    <button type="button" class="btn btn-default  "><span class="glyphicon glyphicon-search"></span></button>
+   	{{#link-to 'inventory.batch' 'new' class="btn btn-primary "}}
+   	+ inventory received
+   	{{/link-to}}
+</form>
+	
+    <h2> Low Quantity </h2>	
     <table class="table">
        <tr class="table-header">
          <th>Name</th>
