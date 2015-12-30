@@ -6,11 +6,11 @@ var today = new Date()
 
 var modelData = {
   'taskData': [
-    {'fulfilled': false, 'patientname': 'Test Patient', 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 1)},
-    {'fulfilled': false, 'patientname': 'Test Patient', 'type': 'report', 'taskname': 'report heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
-    {'fulfilled': false, 'patientname': 'Test Patient', 'type': 'report', 'taskname': 'report heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
-    {'fulfilled': false, 'patientname': 'Test Patient', 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
-    {'fulfilled': false, 'patientname': 'Test Patient', 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 1)}
+    {'fulfilled': false, 'patientname': 'Sherman', 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 1)},
+    {'fulfilled': false, 'patientname': 'Josh', 'type': 'report', 'taskname': 'report heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
+    {'fulfilled': false, 'patientname': 'Trevor', 'type': 'report', 'taskname': 'report heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
+    {'fulfilled': false, 'patientname': 'Trevor', 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 3)},
+    {'fulfilled': false, 'patientname': 'Sherman', 'type': 'surgery', 'taskname': 'open heart surgery on <patientname>', 'date': new Date(today.getDate() - 1)}
   ],
   'patientData': {
     'Sherman': {
